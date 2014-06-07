@@ -25,12 +25,13 @@
 	<script src="js/libraries/angular.js"></script>
 	<script src="js/libraries/angular-resource.min.js"></script>
 	<script src="js/libraries/angular-route.min.js"></script>
-	<script>document.write("<script type='text/javascript' src='js/app.js?v=" + Date.now() + "'><\/script>");</script>
-	<script>document.write("<script type='text/javascript' src='js/config.js?v=" + Date.now() + "'><\/script>");</script>
-	<script>document.write("<script type='text/javascript' src='js/services.js?v=" + Date.now() + "'><\/script>");</script>
-	<script>document.write("<script type='text/javascript' src='js/controllers.js?v=" + Date.now() + "'><\/script>");</script>
-	<script>document.write("<script type='text/javascript' src='js/filters.js?v=" + Date.now() + "'><\/script>");</script>
-	<script>document.write("<script type='text/javascript' src='js/directives.js?v=" + Date.now() + "'><\/script>");</script>
+	<script>var v = window.location.host == 'fucktheworldcup.com' ? Date.now() : '';</script>
+	<script>document.write("<script type='text/javascript' src='js/app.js?v=" + v + "'><\/script>");</script>
+	<script>document.write("<script type='text/javascript' src='js/config.js?v=" + v + "'><\/script>");</script>
+	<script>document.write("<script type='text/javascript' src='js/services.js?v=" + v + "'><\/script>");</script>
+	<script>document.write("<script type='text/javascript' src='js/controllers.js?v=" + v + "'><\/script>");</script>
+	<script>document.write("<script type='text/javascript' src='js/filters.js?v=" + v + "'><\/script>");</script>
+	<script>document.write("<script type='text/javascript' src='js/directives.js?v=" + v + "'><\/script>");</script>
 
 </body>
 </html>
