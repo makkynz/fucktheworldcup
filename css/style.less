@@ -1,0 +1,107 @@
+//---------------------------------------------------
+//  OOLESS - Object Oriented Less
+//---------------------------------------------------
+//
+//  All of the CSS3 fun, none of the prefixes!
+//
+//  -------------------------------------------------
+//  TABLE OF CONTENTS
+//  -------------------------------------------------
+//
+//		- RESETS
+//		- COLORS
+//		- FONTS
+//		- SKIN
+//		- GRIDS, SIZES & POSITIONING
+//		- ELEMENTS
+//		- COMMONS & PAGES
+//		- MEDIAQUERIES
+//
+//
+//     
+//
+//  Copyright (c) 2012 Joel Sutherland
+//  MIT Licensed:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+//---------------------------------------------------
+
+@import url(less/default-mixins.less);
+
+.resets();
+
+/**********
+ * COLORS *
+ *********/
+@white: #ffffff;
+@black: #000000;
+
+/*********
+ * FONTS *
+ ********/
+@import url(less/fonts.less);
+
+/********
+ * SKIN *
+ *******/
+
+/* Mixins for skin (shape, background, color) */
+.button-skin(@bg:red){
+	background: @bg;
+}
+
+/******************************
+ * GRIDS, SIZES & POSITIONING *
+ *****************************/
+
+/* Class for sizing, structure and positioning only */
+.wrapper{
+	width: 940px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	overflow: auto;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.no-m-l{
+	margin-left: 0!important;
+}
+.no-m-r{
+	margin-right: 0!important;
+}
+
+/************
+ * ELEMENTS *
+ ***********/
+
+/* Class for elements */
+.logo{
+	display: block;
+}
+
+/*******************
+ * COMMONS & PAGES *
+ ******************/
+.selection(@white, @black);
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* Here specific style related to pages or section of the pages,
+   here you can associate the structure/elements with the skin and
+   make relations between structure ad elements.
+*/
+
+
+/****************
+ * MEDIAQUERIES *
+ ***************/
+@import url(less/mediaqueries.less);
