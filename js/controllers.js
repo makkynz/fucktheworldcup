@@ -8,7 +8,7 @@ fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', 
   
   	instagram.search(config.tags,function(feed){  
   		$scope.common = common	  	
-  		$scope.feed = feed.data;
+  		$scope.feed = common.shuffleArray(feed.data);
   	});   
    
  }]);

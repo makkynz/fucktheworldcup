@@ -8,7 +8,7 @@ var config = {
 	
 	dev_instagramClientId: 'b3691ccf09e94f0d85dfb01bb7bd907c',
 	prd_instagramClientId: 'a1eef0d6dd1b40a4b65e176e8cef4844',
-	tags: ['fucktheworldcup','allbacks']
+	tags: ['london']
 
 }
 
