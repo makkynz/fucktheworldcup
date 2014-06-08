@@ -14,13 +14,13 @@ fwcService.factory('InstagramService',['$http', function($http){
 			angular.forEach(tags ,function(tag){
 				var endPoint = "https://api.instagram.com/v1/tags/"+tag+"/media/recent?client_id=b3691ccf09e94f0d85dfb01bb7bd907c&callback=JSON_CALLBACK";
             
-	      $http.jsonp(endPoint).success(function(response){
-	      		results.push(response);
-	      		if(results.length == tags.length){
-	      			callback(_this._combineResults(results));
-	      		}	          
-	      }); 
-	    });     
+	      		$http.jsonp(endPoint).success(function(response){
+	      			results.push(response);
+	      			if(results.length == tags.length){
+	      				callback(_this._combineResults(results));
+	      			}	          
+	      		}); 
+	    	});     
 		},
 
 		_combineResults : function (results){
@@ -31,6 +31,15 @@ fwcService.factory('InstagramService',['$http', function($http){
 			});
 			
 			return newResult;
+		},
+
+		getImagesFromFeedData: function(data){
+			var result = [];
+			angular.forEach(data ,function(item){
+				result.push(item.images.low_resolution.url);							
+			});
+
+			return result;
 		}
 
 	}
@@ -43,8 +52,8 @@ fwcService.factory('InstagramService',['$http', function($http){
 	
 
 
-//Instagram API calls
-fwcService.factory('CommonService',function(){
+//common  functions
+fwcService.factory('CommonService',['$http', function($http){
 
 	var _this ={
 
@@ -67,7 +76,25 @@ fwcService.factory('CommonService',function(){
 		  }
 
 		  return array;
-		}
+		},
+
+		preLoadImages: function(arrayImgUrls, callback){
+			var loadedCount = 0;
+			angular.forEach(arrayImgUrls ,function(imgUrl){				
+            	var img = new Image();
+            	img.onload = haveTried;
+            	img.onerror = haveTried;
+    			img.src=imgUrl;	      		
+	      	}); 
+
+	      	function haveTried(){
+	      		loadedCount++;
+      			if(loadedCount == arrayImgUrls.length){
+      				callback();
+      			}
+	      	}
+	    	   
+		}	      	
 
 	}
 
@@ -75,4 +102,4 @@ fwcService.factory('CommonService',function(){
 	return _this;
   		
 		
-});
+}]);

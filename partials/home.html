@@ -1,1 +1,7 @@
-<img ng-repeat="item in feed " ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload class="feed-item" />
+<section class="feed">
+
+	<div ng-repeat="item in feed" class="feed-item left">
+		<img  ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload />
+	</div>
+
+</section>
