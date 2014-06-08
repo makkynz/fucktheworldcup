@@ -41,3 +41,21 @@ fwcService.factory('InstagramService',['$http', function($http){
 		
 }]);
 	
+
+
+//Instagram API calls
+fwcService.factory('CommonService',function(){
+
+	var _this ={
+
+		isMobile : function() {
+			return window.innerWidth <= 768;
+		}
+
+	}
+
+
+	return _this;
+  		
+		
+});

@@ -4,9 +4,10 @@
 
 var fwcCtrls = angular.module('AppName.controllers', []);
 
-fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', function($scope, instagram) {
+fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', function($scope, instagram, common) {
   
-  	instagram.search(config.tags,function(feed){  	  	
+  	instagram.search(config.tags,function(feed){  
+  		$scope.common = common	  	
   		$scope.feed = feed.data;
   	});   
    
