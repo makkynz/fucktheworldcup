@@ -95,6 +95,20 @@ body {
 	height: 100%;
 }
 
+img{
+	&.feed-item{	
+		display: inline;	
+		opacity: 0;	   	
+	    transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+	    transform: scale(0.8);
+	}
+	&.show{
+		opacity: 1;
+	    transform: scale(1);
+	}
+
+}
+
 /* Here specific style related to pages or section of the pages,
    here you can associate the structure/elements with the skin and
    make relations between structure ad elements.
