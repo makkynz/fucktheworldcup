@@ -1,4 +1,4 @@
-<section class="feed">
+<section class="feed" fwc-masonaryresize>
 
 	<div ng-repeat="item in feed" class="feed-item left">
 		<img  ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload />

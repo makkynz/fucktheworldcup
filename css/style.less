@@ -100,12 +100,15 @@ body {
 	/* Prevent vertical gaps */
    line-height: 0;
    
-   -webkit-column-count: 7;
-   -webkit-column-gap:   0px;   
-   column-count:         7;
-   column-gap:           0px;
+   // -webkit-column-count: 7;
+   // -webkit-column-gap:   0px;   
+   // column-count:         7;
+   // column-gap:           0px;
 
 	.feed-item{
+		width: auto;
+		height: auto;
+		float: left;
 		img{		
 			display: inline;	
 			opacity: 0;	   	
@@ -137,28 +140,28 @@ body {
 @import url(less/mediaqueries.less);
 
 @media (max-width: 1200px) {
-  .feed {
+  .feedd {
   -moz-column-count:    4;
   -webkit-column-count: 4;
   column-count:         4;
   }
 }
 @media (max-width: 1000px) {
-  .feed {
+  .feedd {
   -moz-column-count:    3;
   -webkit-column-count: 3;
   column-count:         3;
   }
 }
 @media (max-width: 800px) {
-  .feed {
+  .feedd {
   -moz-column-count:    3;
   -webkit-column-count: 3;
   column-count:         3;
   }
 }
 @media (max-width: 400px) {
-  .feed {
+  .feedd {
   -moz-column-count:    3;
   -webkit-column-count: 3;
   column-count:         3;
