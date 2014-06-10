@@ -210,6 +210,7 @@ body {
   color: white;
   padding: 10px;
   word-wrap: break-word;
+  font-size: 90%;
 }
 
 .feed .feed-item.hover {
