@@ -207,13 +207,18 @@ body {
 }
 
 .feed .feed-item.not-selected {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .feed .feed-item.selected {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
 }
 
 .feed .feed-item img {

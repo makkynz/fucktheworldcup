@@ -48,13 +48,13 @@ angular.module('AppName.directives', [])
 	    return {
 	        link: function(scope, elem, attrs) {
 	            scope.onResize = function() {
-	               var resizeFactor = Math.ceil($window.innerWidth / 160);
-	               if(resizeFactor > 6) resizeFactor = 6;
+	               	var resizeFactor = Math.ceil($window.innerWidth / 160);
+	               	if(resizeFactor > 6) resizeFactor = 6;
 
-	               var newItemWidth = Math.floor($window.innerWidth / resizeFactor);
-	               var styleNode = document.createElement('style');
+	               	var newItemWidth = Math.floor($window.innerWidth / resizeFactor);
+	               	var styleNode = document.createElement('style');
 					styleNode.setAttribute("type", "text/css");
-					var textNode = document.createTextNode(".feed-item{width: "+newItemWidth+"px !important;}");
+					var textNode = document.createTextNode(".feed-item{width: "+newItemWidth+"px !important;} .feed .feed-item.selected{margin-left:-"+newItemWidth/2+"px;margin-top:-"+newItemWidth/2+"px}");
 					styleNode.appendChild(textNode);
 					document.getElementsByTagName("head")[0].appendChild(styleNode);
 	            }
