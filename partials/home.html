@@ -5,7 +5,10 @@
 				ng-click="select($index)"
 				ng-class="{'selected': $index == selected, 'not-selected': selected > 0}">
 
-		<img  ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload />
+		<figure>
+			<img  ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload />
+			<figcaption>{{item.caption.text}}</figcaption>
+		</figure>
 	</div>
 
 </section>

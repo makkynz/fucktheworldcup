@@ -14,9 +14,8 @@ fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', 
 
   	$scope.selected = -1; 
 
-  	$scope.select = function (index) {
-  		
-    	$scope.selected = index;
+  	$scope.select = function (index) {  		
+    	$scope.selected = $scope.selected != index ? index : -1;
   	};   
    
  }]);
