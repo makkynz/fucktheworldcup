@@ -210,7 +210,7 @@ body {
   color: white;
   padding: 10px;
   word-wrap: break-word;
-  font-size: 1em;
+  font-size: 0.5em;
 }
 
 .feed .feed-item.hover {
@@ -227,11 +227,15 @@ body {
   transform: scale(1.5);
   top: 50%;
   left: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   opacity: 1;
   -webkit-box-shadow: 3px 1px 19px 0px #110F0F;
   box-shadow: 3px 1px 19px 0px #110F0F;
+}
+
+.feed .feed-item.selected img {
+  width: auto;
 }
 
 .feed .feed-item.selected figcaption {

@@ -5,8 +5,10 @@
 var fwcCtrls = angular.module('AppName.controllers', []);
 
 fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', function($scope, instagram, common) {
-  
-  	instagram.search(config.tags,function(feed){  
+  	
+  	var tags = common.getParameterByName('tag') == null ? config.tags : [common.getParameterByName('tag')];
+  	
+  	instagram.search(tags,function(feed){  
   		$scope.common = common;	  		
   		$scope.feed = common.shuffleArray(feed.data); 		
   		
