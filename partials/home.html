@@ -1,6 +1,9 @@
 <section class="feed" fwc-masonaryresize>
 
-	<div ng-repeat="item in feed" class="feed-item left">
+	<div 	ng-repeat="item in feed" class="feed-item left"  
+				fwc-feedhover 
+				ng-class="{'selected': $index == selectedIndex }">
+
 		<img  ng-src="{{common.isMobile() && item.images.thumbnail.url || item.images.low_resolution.url}}" fwc-imageload />
 	</div>
 

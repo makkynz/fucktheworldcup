@@ -12,6 +12,12 @@ fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', 
   			$scope.feed = common.shuffleArray(feed.data);
   		//});  	
   		
-  	});   
+  	});
+
+  	$scope.selectedIndex = 0; 
+
+  	$scope.itemClicked = function ($index) {
+    	$scope.selectedIndex = $index;
+  	};   
    
  }]);

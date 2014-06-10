@@ -6,15 +6,43 @@ angular.module('AppName.directives', [])
 
 	.directive('fwcImageload', function (){
 		return {
-        link: function(scope, el, attrs) {   
+	        link: function(scope, el, attrs) {   
 
-            el.bind("load" , function(e){ 
-            	el.addClass('show');                
-            });
+	            el.bind("load" , function(e){ 
+	            	el.addClass('show');                
+	            });
 
-        }
-    }
+	        }
+    	}
 	})
+
+	.directive('fwcFeedhover', function (){
+		return {
+	        link: function(scope, el, attrs) {   
+
+	            el.bind("mouseenter" , function(e){ 
+	            	el.addClass('hover');                
+	            });
+	            el.bind("mouseleave" , function(e){ 
+	            	el.removeClass('hover');                
+	            });
+
+	        }
+    	}
+	})
+
+	.directive('fwcFeedclick', function (){
+		return {
+	        link: function(scope, el, attrs) {   
+
+	            el.bind("click" , function(e){ 
+	            	el.addClass('selected');                
+	            });
+
+	        }
+    	}
+	})
+
 
 	.directive('fwcMasonaryresize', ['$window', function($window) {
 	    return {
