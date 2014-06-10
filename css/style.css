@@ -210,7 +210,7 @@ body {
   color: white;
   padding: 10px;
   word-wrap: break-word;
-  font-size: 90%;
+  font-size: 1em;
 }
 
 .feed .feed-item.hover {
@@ -246,8 +246,8 @@ body {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
 }
 
 .feed .feed-item img.show {
