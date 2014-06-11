@@ -201,11 +201,11 @@ body {
   cursor: pointer;
   -webkit-transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   transition: opacity 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  background: #3c3737;
 }
 
 .feed .feed-item figcaption {
   display: none;
-  background: black;
   opacity: 0.8;
   color: white;
   padding: 10px;
@@ -232,6 +232,7 @@ body {
   opacity: 1;
   -webkit-box-shadow: 3px 1px 19px 0px #110F0F;
   box-shadow: 3px 1px 19px 0px #110F0F;
+  padding-top: 10px;
 }
 
 .feed .feed-item.selected img {
@@ -252,6 +253,7 @@ body {
   transform: scale(0.9);
   width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .feed .feed-item img.show {
