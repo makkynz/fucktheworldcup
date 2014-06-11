@@ -6,7 +6,8 @@ var fwcCtrls = angular.module('AppName.controllers', []);
 
 fwcCtrls.controller('homeCtrl', ['$scope', 'InstagramService', 'CommonService', function($scope, instagram, common) {
   	
-  	var tags = common.getParameterByName('tag') == null ? config.tags : [common.getParameterByName('tag')];
+  	//check if hashtag in url, else use defaults from config
+  	var tags = window.location.hash.length == 0 ? config.tags : [window.location.hash.substring(1)];
   	
   	instagram.search(tags,function(feed){  
   		$scope.common = common;	  		
