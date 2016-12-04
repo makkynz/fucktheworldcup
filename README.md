@@ -1,4 +1,4 @@
-fucktheworldcup
+instatheworldcup
 ===============
 
-Website for fucktheworldcup.com
+Website for instatheworldcup.com
